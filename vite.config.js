@@ -8,5 +8,5 @@ export default defineConfig({
     react(),
     tailwindcss()
   ],
-  base: '/ivory_void/',
+  base: '/Ivory-Void/',
 })
