@@ -41,7 +41,7 @@ const acquiredResources = [
     { name: "cement", amount: 3, reserved: 0 },
     { name: "stone", amount: 9, reserved: 0 },
     { name: "wire", amount: 2, reserved: 0 },
-    { name: "livestock", amount: 1, reserved: 0 }
+    { name: "livesstock", amount: 1, reserved: 0 }
 ];
 
 
