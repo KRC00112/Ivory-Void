@@ -1211,8 +1211,9 @@ td, th {
     border:2px solid #e2e2dd90;
     border-right: 1px solid #e2e2dd90;
     @media(max-width: 1480px) {
-        height: 408px;
+        height: fit-content;
         border-bottom: 1px solid #e2e2dd90;
+        border-right: 2px solid #e2e2dd90;
 
     }
 
