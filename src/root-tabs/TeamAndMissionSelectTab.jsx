@@ -1,4 +1,5 @@
 import React, {useEffect, useState} from 'react'
+import "../css/mission-selection.css";
 import ListBox from "../generic-components/ListBox.jsx";
 import ProgressBar from "@ramonak/react-progress-bar";
 import MapAndSelector from "../generic-components/MapAndSelector.jsx";

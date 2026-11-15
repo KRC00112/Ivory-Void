@@ -1,4 +1,3 @@
-import './App.css'
 import NavBar from "./NavBar.jsx";
 import InteractionInterface from "./InteractionInterface.jsx";
 import {useEffect, useRef, useState} from "react";

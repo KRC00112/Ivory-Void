@@ -1,0 +1,53 @@
+.nav-bar{
+
+    background: #000000;
+    align-self: stretch;
+    display: flex;
+    border-right: white solid 2px;
+    color: white;
+    flex-direction: column;
+    width: 150px;
+    position: fixed;
+    left: 0;
+    z-index: 999;
+    height: 100%;
+
+
+    @media (max-width: 1000px) {
+        flex-direction: row;
+        width: 100%;
+        justify-content: center;
+
+        position: fixed;
+        bottom: 0;
+        height: 70px;
+
+
+
+    }
+
+}
+
+
+.nav-bar button{
+
+    padding: 10px;
+    padding-bottom: 0px;
+    width: 100%;
+    white-space: nowrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media (max-width: 1000px) {
+        height: 100%;
+
+
+    }
+}
+
+.nav-bar button:hover:not(.selected){
+
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+}

@@ -1,0 +1,86 @@
+/******************************************HOME TAB************************************/
+
+
+.home-tab{
+    width: 100%;
+    min-height: 100%;
+    flex-direction: column;
+    /*overflow: hidden;*/
+    position: relative;
+}
+
+
+
+.home-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: 20px;
+    padding-block: 30px;
+    background: rgba(60, 60, 59, 0.90);
+    border-bottom: 2px solid #e2e2dd90;
+
+    z-index: 1;
+}
+.user-name-handle{
+    border-left: 2px solid #ffffff;
+    padding-inline: 10px;
+    color: white;
+
+}
+.home-title{
+    color: white;
+}
+
+.home-screen {
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 86px);
+    background-color: black;
+    overflow: hidden;
+}
+
+
+.resources-display{
+    color: white;
+    width: fit-content;
+    position: absolute;
+    bottom: 7%;
+    left:3%;
+
+    min-height: fit-content;
+    background: rgba(60, 60, 59, 0.90);
+    border: 2px solid #e2e2dd90;
+    padding: 10px;
+    overflow-y: hidden;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    flex-direction: column;
+    z-index: 1;
+}
+
+.resources-display li{
+    padding-right: 10px;
+}
+
+.canvas {
+    align-self: stretch;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position:absolute;
+
+    @media (max-width:1250px ) {
+        top: 0;
+        left: -300px;
+    }
+    @media (max-width:1000px ) {
+        top: 0;
+        left: -400px;
+    }
+
+
+}
+

@@ -1,5 +1,7 @@
 import StaffManagementTabHeader from "../staff-management-components/StaffManagementTabHeader.jsx";
 import StaffListAndDetailsController from "../staff-management-components/StaffListAndDetailsController.jsx";
+import "../css/tab-layout.css";
+import "../css/staff-management.css";
 import {useMemo, useState} from "react";
 
 function ManageStaffTab({handleKickOutClick,handleTeamTransfer,fullDataset,tabsInfo,foodPercent}) {

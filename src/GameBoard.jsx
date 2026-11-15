@@ -1,5 +1,5 @@
 import './index.css'
-import './App.css'
+import './css/game-board.css'
 import {useEffect, useRef, useState} from "react";
 
 

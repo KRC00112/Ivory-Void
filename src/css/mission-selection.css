@@ -1,0 +1,572 @@
+.toolbox{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: calc(100vw - 60px);
+
+    button {
+        margin-left: 10px;
+        width: 2em;
+        background-color: red;
+    }
+}
+
+.mission-select-screen{
+    height: 100%;
+
+
+    /*background-image:url("/map/world_map.png");*/
+    /*background-repeat: no-repeat;*/
+    /*background-size: cover;*/
+    background-color: #000000;
+
+    color: white;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    width: 100%;
+    flex-grow: 1;
+    /*padding-bottom: 100px;*/
+    @media(max-width: 1480px){
+        padding-inline: 40px;
+    }
+
+
+}
+
+.selected-scout-profile{
+    display: flex;
+    width:fit-content;
+    margin-right: 15px;
+    border: 1px solid white;
+}
+.scout-face{
+    background: white;
+    border: 1px solid white;
+    border-right: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: black;
+}
+
+.scout-face-and-name{
+    width: 91px;
+
+
+}
+.name-overflow{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+
+
+.scout-inventory{
+    background: black;
+    display:flex;
+    flex-direction: column;
+    color: white;
+}
+.scout-inventory li{
+    /*background: #ffd680;*/
+    flex-grow: 1;
+    border: 1px solid white;
+
+    width:70px;
+
+    display: flex;
+    padding: 1.5px;
+
+
+}
+.scout-inventory li button{
+    /*background: #ffd680;*/
+    flex-grow: 1;
+    background-color: black;
+    color: white;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 2px;
+    font-size: 14px;
+
+
+
+}
+
+.scout-inventory li button.item-in-inventory {
+    background-color: white;
+    color: black;
+
+}
+
+
+
+
+.selected-members-showcase{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.team-members-and-start{
+    display: flex;
+    align-items: center;
+    /*margin-top: 100px;*/
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    @media (max-width: 1500px) {
+        gap:10px;
+        margin-bottom: 100px;
+
+
+    }
+
+
+}
+
+
+.mission-start-btn {
+    align-self: flex-end;
+    appearance: none;
+    background-color: black;
+    border: 1px solid white;
+    box-sizing: border-box;
+    color: white;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Clarkson, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0;
+    line-height: 1em;
+    margin: 0;
+    opacity: 1;
+    outline: 0;
+    padding: 1.5em 2.2em;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    text-rendering: geometricprecision;
+    text-transform: uppercase;
+    transition: opacity 300ms cubic-bezier(.694, 0, 0.335, 1),
+    background-color 100ms cubic-bezier(.694, 0, 0.335, 1),
+    color 100ms cubic-bezier(.694, 0, 0.335, 1);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: baseline;
+    white-space: nowrap;
+    width: 190px;
+
+    @media (max-width: 1500px) {
+        gap:10px;
+        flex-grow: 1;
+
+    }
+}
+.mission-start-btn.fill-enabled:before {
+    animation: opacityFallbackOut .5s step-end forwards;
+    backface-visibility: hidden;
+    background-color: white;
+    clip-path: polygon(-1% 0, 0 0, -25% 100%, -1% 100%);
+    content: "";
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    transform: translateZ(0);
+    transition: clip-path .5s cubic-bezier(.165, 0.84, 0.44, 1),
+    -webkit-clip-path .5s cubic-bezier(.165, 0.84, 0.44, 1);
+    width: 100%;
+}
+
+.mission-start-btn.fill-enabled:hover:before {
+    animation: opacityFallbackIn 0s step-start forwards;
+    clip-path: polygon(0 0, 101% 0, 101% 101%, 0 101%);
+}
+
+.mission-start-btn.fill-enabled:after {
+    background-color: #FFFFFF;
+
+}
+
+.mission-start-btn.fill-enabled span {
+    z-index: 1;
+    position: relative;
+    transition: color 200ms cubic-bezier(.694, 0, 0.335, 1);
+}
+
+.mission-start-btn.fill-enabled:hover span {
+    color: black;
+}
+.mission-start-btn.fill-enabled span {
+    z-index: 1;
+    position: relative;
+
+}
+
+.inventory-weapons-select-overlay{
+
+    width: 100%;
+    height: 100%;
+    /*background-color: rgba(188, 188, 188, 0.5);*/
+    position: absolute;
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(1px);
+
+
+}
+
+.inventory-items-select-container{
+    min-width:100px ;
+    min-height: fit-content;
+    width: 500px;
+    background: rgba(60, 60, 59, 0.90);
+    border: 2px solid #e2e2dd90;
+    padding: 10px;
+    overflow-y: hidden;
+    display: flex;
+    flex-direction: column;
+    z-index: 6;
+
+
+}
+
+.inventory-items-select-container-title{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+.close-inventory-items-select-container{
+    /*background: #ff3375;*/
+    padding: 3px;
+    padding-inline: 10px;
+    border: 0.5px solid transparent;
+}
+
+.close-inventory-items-select-container:hover{
+
+    border: 0.5px solid #e2e2dd90;
+    background-color: rgba(251, 251, 249, 0.2);
+
+}
+
+
+.inventory-items-select-list{
+
+    display: flex;
+    align-items: flex-end;
+    border-bottom: 2px solid rgba(244, 244, 241, 0.56);
+
+
+
+}
+.inventory-items-select-list li{
+
+    align-self: flex-end;
+    display: flex;
+
+
+
+
+}
+
+.inventory-items-select-list li button{
+
+    color: white;
+    border-bottom:none;
+    padding: 10px;
+    align-self: flex-end;
+
+
+
+
+}
+.inventory-items-inactive-tab{
+    border: 2px solid transparent;
+}
+
+.active-tab{
+    border: 2px solid #e2e2dd90;
+
+
+
+}
+
+.all-developed-items{
+
+    /*background-color: red;*/
+    max-height: 280px;
+    min-height: 280px;
+    overflow-y: auto;
+
+
+}
+.item-category{
+    margin-top: 5px;
+
+}
+.item-category-heading{
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    color: black;
+    padding: 10px;
+
+}
+
+.item-category-heading h3{
+  align-self: center;
+}
+
+.item-category-expand-collapse-btn{
+
+    font-size: 20px;
+    transition: transform 0.3s ease-in-out;
+
+
+}
+.after-click{
+
+    transform: rotate(90deg);
+
+
+}
+
+.items-table{
+    margin-top: 0px;
+    width: 100%;
+
+}
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+
+}
+.clear-selection-btn{
+    margin-top: 10px;
+    background: black;
+    border-radius: 1.5rem;
+    padding:8px;
+    font-size: 13px;
+    cursor: pointer;
+
+}
+
+.clear-selection-btn-and-label{
+    align-self: flex-end;
+}
+
+.clear-selection-btn:hover{
+    background: white;
+    color: black;
+
+}
+.team-selection-and-mission-start{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap:50px;
+
+
+}
+.team-members-and-mission-select-section{
+    display: flex;
+    /*justify-content: space-between;*/
+    align-items: stretch;
+    justify-content: center;
+    flex-wrap: wrap;
+    height: fit-content;
+    /*border: 5px solid green;*/
+    @media(max-width: 1480px){
+        padding-top: 60px;
+        /*gap: 300px;*/
+        flex-direction: column-reverse;
+    }
+
+
+}
+
+
+.select-mission-header{
+    background-color: #d11010;
+    color: white;
+    position:absolute;
+    bottom:90%;
+    padding:10px;
+    padding-right: 30px;
+    margin-left: 25px;
+    padding-bottom: 30px;
+    font-size: 30px;
+    @media(max-width: 1480px){
+        position: static;
+        margin-left:0px;
+    }
+}
+
+.mission-select-section{
+    padding: 0;
+    display: flex;
+    border: 1px solid white;
+    justify-content: flex-start;
+}
+
+
+/****************************** MAP AND SELECTOR STYLES**********************************/
+
+.map-window{
+    width:500px;
+
+    border-right:1px solid #e2e2dd90;
+    overflow: hidden;
+    position:relative;
+    display: flex;
+    background-color: black;
+    height: 300px;
+    flex-grow: 1;
+    border:2px solid #e2e2dd90;
+    border-right: 1px solid #e2e2dd90;
+    @media(max-width: 1480px) {
+        height: fit-content;
+        border-bottom: 1px solid #e2e2dd90;
+        border-right: 2px solid #e2e2dd90;
+
+    }
+
+}
+.header-and-map-and-missions{
+    position:relative;
+    @media(max-width: 1480px){
+        width: 100%;
+    }
+
+}
+.mission-name-and-description{
+    background-color: #d11010;
+
+
+    position: absolute;
+    top:80%;
+    left:38%;
+    padding:10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: wrap;
+    width: 500px;
+
+    @media(max-width: 1480px){
+        position:static;
+        margin-bottom:10px;
+        width:100%;
+
+
+    }
+
+
+}
+
+.missions-list-and-description{
+    display: flex;
+    flex-direction:column-reverse;
+}
+
+.mission-name{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: wrap;
+    width: 100%;
+}
+
+.mission-desc{
+    height: 50px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: wrap;
+    width: 100%;
+
+}
+
+
+.map-and-missions{
+    display:flex;
+    height: fit-content;
+    justify-content: space-between;
+    flex-grow: 0;
+    flex-wrap: wrap;
+    margin-left: 50px;
+    /*border: 10px solid rgba(220, 220, 46, 0.56);*/
+    /*border:2px solid #e2e2dd90;*/
+    @media(max-width: 1480px){
+        margin-left: 0;
+
+    }
+
+
+
+
+}
+
+.mission-list-div{
+    /*background-color: #34da34;*/
+    /*border:2px solid #e2e2dd90;*/
+    padding: 3px;
+    flex-grow: 1;
+    border:2px solid #e2e2dd90;
+    border-left:1px solid #e2e2dd90;
+
+
+}
+
+.missions-list{
+    display: flex;
+    flex-direction: column;
+    border:0.5px solid #e2e2dd90;
+    overflow: auto;
+    height: 230px;
+    min-width:300px;
+    border-left:1px solid #e2e2dd90;
+    background-color: #000000;
+    @media(max-width: 1480px){
+        height: 295px;
+    }
+
+
+
+
+
+
+}
+.mission-list-item-active{
+    background-color: #d11010;
+
+}
+
+.mission-list-item{
+    padding-block: 2px;
+    width: 100%;
+    display: flex;
+    padding: 0;
+    border-bottom: 1px solid #e2e2dd90;
+
+}
+.mission-list-item-btn{
+    flex: 1;
+    height: 100%;
+    width: 100%;
+    border: none;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    padding-left: 5px;
+    padding-right: 10px;
+
+}

@@ -1,0 +1,175 @@
+/************************************GAME BOARD CSS****************************/
+.gameboard-header{
+    display: flex;
+    /*background-color: #d11010;*/
+    align-items: center;
+    padding:2px;
+
+}
+.gameboard-header div{
+    padding-left: 10px;
+}
+.gameplay-area{
+    display: flex;
+    flex-direction: column;
+    /*background-color: rebeccapurple;*/
+}
+.game-and-panel{
+    display: flex;
+    background: #ff3375;
+    box-shadow: -10px 10px lightblue;
+
+}
+.player-control-panel{
+    border: 3px solid black;
+    margin-block: 1px;
+    margin-left:2px;
+    width:400px;
+    padding:10px;
+
+}
+
+.board{
+    height: 100vh;
+    /*background-image:url("/map/world_map.png");*/
+    /*background-repeat: no-repeat;*/
+    /*background-size: cover;*/
+
+    width: 100vw;
+    background-color: white;
+    color: black;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    /*background-color: #34da34;*/
+
+
+}
+
+.game-over-screen{
+    max-width:500px ;
+    min-width:500px ;
+    min-height: fit-content;
+    width: fit-content;
+    position: absolute;
+    background: rgba(60, 60, 59, 0.90);
+    border: 2px solid #e2e2dd90;
+    padding: 10px;
+    overflow-y: hidden;
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+    justify-content: center;
+    align-self: center;
+    color: white;
+}
+
+
+.cell {
+    background-color: #d88e45;
+    border: 0.5px solid white;
+    height: 75px;
+    width: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none
+
+
+}
+
+.cell:hover{
+    background-color: #eda45b;
+}
+
+
+.board-columns {
+
+    width: fit-content;
+    /*display: grid;*/
+    /*grid-template-columns: repeat(8, 80px);*/
+    /*gap: 0;*/
+    display: flex;
+
+}
+
+.player-cell{
+    background-color: #34da34;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*border: 0.5px solid white;*/
+}
+
+.enemy-cell{
+    background-color: #2b7cea;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*border: 0.5px solid white;*/
+}
+
+.playerSelectBorder{
+    border: 5px solid #45ed45;
+    background-color: #eda45b;
+}
+
+.enemySelectBorder{
+    border: 5px solid #ff0026;
+    background-color: #eda45b;
+
+}
+
+.attackLocationsSelectBorder{
+    border: 1px solid #fae800;
+    background-color: #eda45b;
+
+}
+
+
+
+
+.end-turn-btn{
+
+    width: 120px;
+    height: 60px;
+    border: 1px solid black;
+    color: white;
+    background-color: black;
+
+}
+
+.img-flip{
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+
+.inventory-items{
+    display: flex;
+    flex-direction: row;
+}
+.inventory-items-btn{
+    padding: 20px;
+    border: 1px solid black;
+
+}
+
+.active-click{
+    background-color: #34da34;
+    border: 1px solid black;
+}
+
+.go-back-button{
+    padding: 10px;
+    border: 1px solid black;
+    background-color: black;
+    color: white;
+
+
+}

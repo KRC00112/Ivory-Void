@@ -1,0 +1,38 @@
+/******************** GENERAL CSS SETTINGS *******************/
+.main-interface{
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
+    /*overflow: hidden;*/
+    background: #000;
+    display: flex;
+    /*padding-top:60px;*/
+    padding-left: 150px;
+
+    @media (max-width: 1000px) {
+        width: 100%;
+        height: fit-content;
+        padding-left: 0px;
+    }
+
+}
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: rgb(94, 92, 92);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: rgb(147, 145, 145);
+
+}
+
+/*!* Handle on hover *!*/
+/*::-webkit-scrollbar-thumb:hover {*/
+/*    background: rgb(147, 145, 145);*/
+/*}*/
+

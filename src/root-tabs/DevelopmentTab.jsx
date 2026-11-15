@@ -1,6 +1,8 @@
 import React, {useState} from 'react'
 import DevelopmentTabHeader from "../development-components/DevelopmentTabHeader.jsx";
 import DevelopmentScreenController from "../development-components/DevelopmentScreenController.jsx";
+import "../css/tab-layout.css";
+import "../css/development.css";
 
 
 function DevelopmentTab({rAndDLevel,scoutTeamLevel,kitchenStaffLevel,fullDevelopmentDataset,changeDevelopmentStatus,acquiredResourcesList}) {

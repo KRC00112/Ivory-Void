@@ -1,4 +1,5 @@
 import React, {useEffect, useState} from 'react'
+import './css/layout.css'
 import HomeTab from "./root-tabs/HomeTab.jsx";
 import ManageStaffTab from "./root-tabs/ManageStaffTab.jsx";
 import DevelopmentTab from "./root-tabs/DevelopmentTab.jsx";
